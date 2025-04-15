@@ -1,0 +1,331 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-Dark-Gray: hsl(0, 0%, 63%);
+
+  --clr-Very-Dark-Gray: hsl(0, 0%, 27%);
+  --clr-Grayish-Blue: hsl(201, 11%, 66%);
+
+  --clr-White: #ffffff;
+  --clr-Black: #121212;
+
+  --ff-main: "League Spartan", sans-serif;
+  --fs-body: 16px;
+  --fs-heading: 1.75rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400);
+  color: var(--clr-Black);
+  background: var(--clr-White);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile Styles room section*/
+.room-mobile {
+  display: block;
+  width: 100%;
+  height: 400px;
+  background: url('./images/mobile-image-hero-1.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.room-mobile .icon {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  cursor: pointer;
+}
+
+.room-mobile .title {
+  position: absolute;
+  left: 160px;
+  top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.room-mobile .arrows {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 120px;
+  height: 60px;
+  background-color: var(--clr-Black);
+}
+
+.room-mobile .arrows .arrows-container a img {
+  width: 15px;
+  height: 20px;
+  margin: auto;
+}
+
+.room-mobile .arrows:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.room-mobile .arrows .arrows-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.discover-mobile {
+  display: block;
+  margin: 60px 40px 10px 40px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.discover-mobile h1 {
+  font-size: 35px;
+  font-weight: bolder;
+  text-transform: none;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.discover-mobile p {
+  font-size: 16px;
+  font-weight: var(--fw-400);
+  color: var(--clr-Dark-Gray);
+  line-height: 1.4;
+}
+
+.discover-mobile .shop-now a {
+  display: flex;
+  gap: 25px;
+  margin: 40px 40px 60px 40px;
+  max-width: 400px;
+  font-size: 16px;
+  font-weight: var(--fw-700);
+  letter-spacing: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.about-mobile img {
+  width: 100%;
+  height: auto;
+}
+
+.about-mobile .about-text-container {
+  margin: 60px 40px 10px 40px;
+  max-width: 400px;
+}
+
+.about-mobile .about-text-container h2 {
+  font-size: 16px;
+  font-weight: bolder;
+  text-transform: none;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-mobile .about-text-container p {
+  font-size: 16px;
+  font-weight: var(--fw-400);
+  color: var(--clr-Dark-Gray);
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+.room-discover-container-desktop {
+  display: none;
+}
+
+.about-desktop-container {
+  display: none;
+}
+
+/* Responsive Desktop ________________________________________________________________________*/
+@media screen and (min-width: 1024px) {
+
+  .room-mobile {
+    display: none;
+  }
+
+  .discover-mobile {
+    display: none;
+  }
+
+  .about-mobile {
+    display: none;
+  }
+
+  :root {
+    --clr-Dark-Gray: hsl(0, 0%, 63%);
+
+    --clr-Very-Dark-Gray: hsl(0, 0%, 27%);
+    --clr-Grayish-Blue: hsl(201, 11%, 66%);
+
+    --clr-White: #ffffff;
+    --clr-Black: #121212;
+
+    --ff-main: "League Spartan", sans-serif;
+    --fs-body: 16px;
+    --fs-heading: 1.75rem;
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+  }
+
+  body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-400);
+    color: var(--clr-Black);
+    background: var(--clr-White);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Contenedor principal con imagen a la izquierda y texto a la derecha */
+  .room-discover-container-desktop {
+    display: flex;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    font-family: var(--ff-main);
+  }
+
+  .room-container-desktop {
+    display: flex;
+    position: relative;
+    width: 200%;
+    height: auto;
+    background: url('./images/desktop-image-hero-1.jpg') no-repeat center center/cover;
+    color: var(--clr-White);
+  }
+
+  .logo {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    cursor: pointer;
+  }
+
+  .room-discover-container-desktop .room-container-desktop .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .discover-desktop {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .discover-desktop .discover-desktop-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 80px;
+    gap: 20px;
+  }
+
+  .discover-desktop .arrows-desktop {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 120px;
+    height: 60px;
+    background-color: var(--clr-Black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .discover-desktop .arrows-desktop .arrows-container-desktop a img {
+    width: 30px;
+    height: 40px;
+    margin: auto;
+  }
+
+  .about-desktop-container {
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    position: relative;
+    top: 380px;
+
+  }
+
+  .about-desktop-container .about-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+  }
+  .about-desktop-container .about-desktop img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-text-desktop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+    max-width: 800px;
+  }
+  .about-text-desktop-container h2 {
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: none;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
