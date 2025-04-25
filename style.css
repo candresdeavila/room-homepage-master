@@ -95,7 +95,7 @@ body {
 
 .main_paragraph {
   line-height: 1.5;
-  margin: 1em 0 2em;
+  margin: 16px 0 32px;
   color: var(--dark-gray);
 }
 
@@ -131,14 +131,14 @@ body {
 }
 
 .main_paragraph_about {
-  margin: 1em 0 0 0;
+  margin: 16px 0 0 0;
 }
 
 @media (min-width: 768px) {
 
   .container {
-      width: 85%;
-      padding: 70px 0;
+      width: 70%;
+      padding: 40px 0;
 
   }
 
@@ -155,6 +155,8 @@ body {
   .main_controls {
       grid-area: buy;
       justify-self: start;
+      width: 33.5%;
+      height: 80px;
   }
 
   .main_hamburguer {
@@ -165,7 +167,7 @@ body {
       padding: 0;
       display: grid;
       grid-auto-flow: column;
-      gap: 1em;
+      gap: 16px;
       margin-left: 10%;
   }
 
