@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -113,12 +114,12 @@ body {
 
 .main_bg {
   grid-area: image1;
-  min-height: 250px;
+/*min-height: 250px;
   height: 100px;
   background-image: url("./images/image-about-dark.jpg");
   background-size: cover;
   background-position: center;
-
+  */
 }
 
 .main_about {
@@ -127,7 +128,7 @@ body {
 
 .main_bg_second {
   grid-area: image2;
-  background-image: url("./images/image-about-light.jpg");
+  /*background-image: url("./images/image-about-light.jpg");*/
 }
 
 .main_paragraph_about {
@@ -139,7 +140,6 @@ body {
   .container {
       width: 70%;
       padding: 40px 0;
-
   }
 
   .main {
@@ -151,6 +151,19 @@ body {
           "image1 image1 about about about image2 image2"
           "image1 image1 about about about image2 image2"
   }
+
+  .main_bg {
+    grid-area: image1;
+  }
+  
+  .main_about {
+    grid-area: about;
+  }
+  
+  .main_bg_second {
+    grid-area: image2;
+  }
+  
 
   .main_controls {
       grid-area: buy;
@@ -182,5 +195,12 @@ body {
   .main_link {
       color: var(--white);
       text-decoration: none;
+  }
+
+  .main_bg img,
+  .main_bg_second img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
