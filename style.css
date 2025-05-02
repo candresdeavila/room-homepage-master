@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 :root {
@@ -14,8 +13,10 @@
   --Very-dark-gray: hsl(0, 0%, 27%);
 }
 
+
 body {
   font-family: "League Spartan", sans-serif;
+  border: 3px solid red;
 }
 
 .container {
@@ -23,7 +24,6 @@ body {
   margin: 0 auto;
   padding: 60px 0;
   overflow: hidden;
-
 }
 
 .main {
@@ -61,16 +61,15 @@ body {
 }
 
 .main_controls {
+  grid-area: main;
   background-color: var(--black);
   display: flex;
   width: 100px;
   height: 50px;
   justify-content: space-around;
   align-items: center;
-  grid-area: main;
   justify-self: end;
   align-self: end;
-
 }
 
 .main_arrows {
@@ -114,6 +113,8 @@ body {
 
 .main_bg {
   grid-area: image1;
+  width: 100%;
+  overflow: hidden;
 /*min-height: 250px;
   height: 100px;
   background-image: url("./images/image-about-dark.jpg");
@@ -143,6 +144,7 @@ body {
   }
 
   .main {
+      min-height: 100vh;
       grid-template-columns: repeat(7, 1fr);
       grid-template-areas:
           "main main main main buy buy buy"
@@ -150,10 +152,11 @@ body {
           "main main main main buy buy buy"
           "image1 image1 about about about image2 image2"
           "image1 image1 about about about image2 image2"
+      
   }
 
   .main_bg {
-    grid-area: image1;
+    grid-area: image1;   
   }
   
   .main_about {
@@ -201,6 +204,7 @@ body {
   .main_bg_second img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
 }
