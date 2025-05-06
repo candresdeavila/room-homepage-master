@@ -71,6 +71,22 @@ body {
   align-self: end;
 }
 
+.main_controls a {
+  background-color: var(--black);
+  display: flex;
+  width: 100px;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  justify-self: end;
+  align-self: end;
+}
+
+.main_controls a:hover {
+  background-color: var(--dark-gray);
+}
+  
+
 .main_arrows {
   height: 40%;
 }
@@ -172,6 +188,21 @@ body {
       justify-self: start;
       width: 33.5%;
       height: 80px;
+  }
+
+  .main_controls a {
+    background-color: var(--black);
+    display: flex;
+    width: 100px;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: end;
+    align-self: end;
+  }
+  
+  .main_controls a:hover {
+    background-color: var(--dark-gray);
   }
 
   .main_hamburguer {
